@@ -1,0 +1,6 @@
+<h1>Hobbyists</h1>
+<% @hobbyists.map do |hobbyist| %>
+  <p>Name: <%= hobbyist.name %></p>
+  <p>Insurance?: <%= hobbyist.insurance %></p>
+  <p>Garage Capacity: <%= hobbyist.garage_capacity %></p>
+<% end %> 

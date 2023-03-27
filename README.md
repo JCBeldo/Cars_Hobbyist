@@ -32,14 +32,15 @@ As a visitor
 When I visit '/car_table_name/:id'
 Then I see the Car with that id including the Car's attributes
 (data from each column that is on the Car table)
-- [] done
+- [x] done
 
 User Story 5, Hobbyist Cars Index 
 
 As a visitor
-When I visit '/hobbyists/:hobbyist_id/Car_table_name'
+When I visit '/hobbyists/:hobbyist_id/car_table_name'
 Then I see each Car that is associated with that Hobbyist with each Car's attributes
 (data from each column that is on the Car table)
+
 ActiveRecord
 - [] done
 

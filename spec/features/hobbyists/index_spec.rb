@@ -16,21 +16,3 @@ RSpec.describe '/hobbyists (hobbyist index page)', type: :features do
     end
   end
 end
-
-# require 'rails_helper'
-
-# RSpec.describe '/collectors (Collector Index Page)', type: :features do
-#   describe 'as a visitor, when I visit the index page' do
-#     let(:collector_1) { Collector.create!(name: 'Joe John', insurance: true, garage_capacity: 22 )}
-#     let(:collector_2) { Collector.create!(name: 'Billy Bob', insurance: false, garage_capacity: 6 )}
-#     it 'should display the name of each collector' do
-#       visit "/collectors"
-#       # collector_1 = Collector.create!( name: 'Joe John', insurance: true, garage_capacity: 22 )
-#       # collector_2 = Collector.create!( name: 'Billy Bob', insurance: false, garage_capacity: 6 )
-
-#       expect(page).to have_content(collector_1.insurance)
-#       expect(page).to have_content(collector_1.name)
-#       expect(page).to have_content(collector_2.name)
-#     end
-#   end
-# end

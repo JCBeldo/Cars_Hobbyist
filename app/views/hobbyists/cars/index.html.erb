@@ -1,0 +1,8 @@
+<h1><%=@hobbyist.name%>'s Cars</h1>
+<% @cars.map do |car| %>
+  <h2>Make: <%= car.make %></h2>
+  <h3>Model: <%= car.model %></h3>
+  <p>Drivable: <%= car.drivable %></p>
+  <p>Year: <%= car.year %></p>
+  <p>Mileage: <%= car.mileage %></p>
+<% end %>

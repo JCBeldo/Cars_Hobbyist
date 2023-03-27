@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe '/car_table_name/ (Car index page)', type: :features do
+RSpec.describe '/hobbyists/:hobyist_id/car_table_name (Hobbyist Cars index page)', type: :features do
   describe 'as a visitor when I visit the index page' do
     let!(:hobbyist_1) { Hobbyist.create!(name: 'Joe John', insurance: true, garage_capacity: 22 )}
     let!(:hobbyist_2) { Hobbyist.create!(name: 'Billy Bob', insurance: false, garage_capacity: 6 )}
@@ -8,10 +8,11 @@ RSpec.describe '/car_table_name/ (Car index page)', type: :features do
     let!(:studebaker) { hobbyist_1.cars.create!(make: 'Studebaker', model: 'Commander', drivable: true, year: 1951, mileage: 80_000.08 )}
     let!(:jaguar) { Car.create!(make: 'Jaguar', model: 'E Type', drivable: false, year: 1970, mileage: 135_045.15, hobbyist: hobbyist_2 )}
 
-    it 'should display the attributes of each car' do
-      visit "/car_table_name"
+    it 'should display all cars associated with the hobbyist' do
+      visit "/hobbyists/#{hobbyist_1.id}/car_table_name"
       # save_and_open_page
-      expect(page).to have_content("Cars")
+
+      expect(page).to have_content("Joe John's Cars")
       expect(page).to have_content(mini.make)
       expect(page).to have_content(mini.model)
       expect(page).to have_content(mini.drivable)

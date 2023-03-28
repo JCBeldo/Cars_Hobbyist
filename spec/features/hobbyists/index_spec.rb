@@ -32,11 +32,19 @@ RSpec.describe '/hobbyists (hobbyist index page)', type: :features do
     end
       
     it 'links to car index' do
-    visit "/hobbyists/"
-      save_and_open_page
-    click_link("Hobbyist Index")
-      
-    expect(current_path).to eq("/hobbyists")
+      visit "/hobbyists/"
+        
+      click_link("Hobbyist Index")
+        
+      expect(current_path).to eq("/hobbyists")
+    end
+    
+    it 'shows a button to create a new hobbyist' do
+      visit "/hobbyists/"
+        save_and_open_page
+      click_link("New Hobbyist")
+        
+      expect(current_path).to eq('/hobbyists/new')
     end
   end
 end

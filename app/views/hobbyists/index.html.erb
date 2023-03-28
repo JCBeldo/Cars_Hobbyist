@@ -1,5 +1,6 @@
 <%= link_to "Car Index", '/cars' %>
 <%= link_to "Hobbyist Index", '/hobbyists' %>
+<h3><%= link_to "New Hobbyist", '/hobbyists/new' %></h3>
 <h1>Hobbyists</h1>
 <% @hobbyists.map do |hobbyist| %> 
   <h3>Name: <%= hobbyist.name%> <%= hobbyist.created_at %></h3>

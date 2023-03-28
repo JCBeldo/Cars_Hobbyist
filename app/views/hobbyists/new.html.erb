@@ -1,0 +1,8 @@
+<%= link_to "Car Index", '/cars' %>
+<%= link_to "Hobbyist Index", '/hobbyists' %>
+<%= form_with url: '/hobbyists', method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  
+  <%= form.submit "Create Hobbyist" %>
+<% end %>

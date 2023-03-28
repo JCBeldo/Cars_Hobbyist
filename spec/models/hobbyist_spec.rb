@@ -20,10 +20,21 @@ RSpec.describe Hobbyist, type: :model do
   end
 
   describe 'instance methods' do
-    it '#car_count' do
+    describe '#car_count' do
+      it 'returns a count of cars per hobbyist' do
 
-    expect(hobbyist_1.car_count).to eq(2)
-    expect(hobbyist_2.car_count).to eq(2)
+        expect(hobbyist_1.car_count).to eq(2)
+        expect(hobbyist_2.car_count).to eq(2)
+      end
+    end
+  end
+
+  describe 'class methods' do
+    describe '::newest_first' do
+      it 'returns hobbyists ordered by most recently created' do
+
+      expect(Hobbyist.newest_first).to eq([hobbyist_2, hobbyist_1])
+      end
     end
   end
 end

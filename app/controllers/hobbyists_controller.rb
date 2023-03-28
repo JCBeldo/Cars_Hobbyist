@@ -1,6 +1,6 @@
 class HobbyistsController < ApplicationController
   def index
-    @hobbyists = Hobbyist.all
+    @hobbyists = Hobbyist.all.newest_first
   end
 
   def show

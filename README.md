@@ -42,7 +42,7 @@ Then I see each Car that is associated with that Hobbyist with each Car's attrib
 (data from each column that is on the Car table)
 
 ActiveRecord
-- [] done
+- [x] done
 
 User Story 6, Hobbyist Index sorted by Most Recently Created 
 

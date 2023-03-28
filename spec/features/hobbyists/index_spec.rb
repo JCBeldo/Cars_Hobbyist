@@ -7,7 +7,7 @@ RSpec.describe '/hobbyists (hobbyist index page)', type: :features do
 
     it 'should display the name of each hobbyist' do
       visit "/hobbyists"
-      save_and_open_page
+
       expect(page).to have_content("Hobbyists")
       expect(page).to have_content(hobbyist_1.name)
       expect(page).to have_content(hobbyist_2.name)

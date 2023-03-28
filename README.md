@@ -7,7 +7,7 @@ As a visitor
 When I visit '/hobbyists'
 Then I see the name of each Hobbyist record in the system
 
-- [] done
+- [x] done
 
 User Story 2, Hobbyist Show #displays info for ONE record/model
 
@@ -21,7 +21,7 @@ Then I see the Hobbyist with that id including the Hobbyist's attributes
 User Story 3, Car Index 
 
 As a visitor
-When I visit '/car_table_name'
+When I visit '/cars'
 Then I see each Car in the system including the Car's attributes
 (data from each column that is on the Car table)
 - [] done
@@ -29,7 +29,7 @@ Then I see each Car in the system including the Car's attributes
 User Story 4, Car Show 
 
 As a visitor
-When I visit '/car_table_name/:id'
+When I visit '/cars/:id'
 Then I see the Car with that id including the Car's attributes
 (data from each column that is on the Car table)
 - [x] done
@@ -37,7 +37,7 @@ Then I see the Car with that id including the Car's attributes
 User Story 5, Hobbyist Cars Index 
 
 As a visitor
-When I visit '/hobbyists/:hobbyist_id/car_table_name'
+When I visit '/hobbyists/:hobbyist_id/cars'
 Then I see each Car that is associated with that Hobbyist with each Car's attributes
 (data from each column that is on the Car table)
 
@@ -78,4 +78,4 @@ User Story 10, Hobbyist Car Index Link
 
 As a visitor
 When I visit a Hobbyist show page ('/hobbyists/:id')
-Then I see a link to take me to that Hobbyist's `Car_table_name` page ('/hobbyists/:id/car_table_name')
+Then I see a link to take me to that Hobbyist's `Cars` page ('/hobbyists/:id/cars')

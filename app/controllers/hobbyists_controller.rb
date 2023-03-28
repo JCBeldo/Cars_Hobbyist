@@ -4,5 +4,6 @@ class HobbyistsController < ApplicationController
   end
 
   def show
+    @hobbyist = Hobbyist.find(params[:id])
   end
 end

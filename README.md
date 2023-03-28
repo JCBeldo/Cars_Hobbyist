@@ -50,13 +50,14 @@ As a visitor
 When I visit the Hobbyist index,
 I see that records are ordered by most recently created first
 And next to each of the records I see when it was created
-- [] done
+- [x] done
 
 User Story 7, Hobbyist Car Count
 
 As a visitor
 When I visit a Hobbyist's show page
 I see a count of the number of Cars associated with this Hobbyist
+
 Usability
 - [] done
 

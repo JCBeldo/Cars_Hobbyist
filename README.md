@@ -24,7 +24,7 @@ As a visitor
 When I visit '/cars'
 Then I see each Car in the system including the Car's attributes
 (data from each column that is on the Car table)
-- [] done
+- [x] done
 
 User Story 4, Car Show 
 

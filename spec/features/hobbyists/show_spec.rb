@@ -27,9 +27,38 @@ RSpec.describe '/hobbyists/:id (Hobbyist show page)', type: :features do
 
     it 'should display the count of the cars' do
     visit "/hobbyists/#{hobbyist_1.id}"
-    save_and_open_page
 
     expect(page).to have_content("Current Number of Cars in Collection")
+    end
+
+    it 'links to car show page' do
+    visit "/hobbyists/#{hobbyist_1.id}"
+
+    click_link("Joe John's Cars")
+
+    expect(current_path).to eq("/hobbyists/#{hobbyist_1.id}/cars")
+    
+    visit "/hobbyists/#{hobbyist_2.id}"
+    # save_and_open_page
+    click_link("Billy Bob's Cars")
+
+    expect(current_path).to eq("/hobbyists/#{hobbyist_2.id}/cars")
+    end
+   
+    it 'links to car index' do
+    visit "/hobbyists/#{hobbyist_1.id}"
+
+    click_link("Car Index")
+
+    expect(current_path).to eq("/cars")
+    end
+    
+    it 'links to car index' do
+    visit "/hobbyists/#{hobbyist_1.id}"
+      save_and_open_page
+    click_link("Hobbyist Index")
+      
+    expect(current_path).to eq("/hobbyists")
     end
   end
 end

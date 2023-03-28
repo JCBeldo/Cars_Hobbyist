@@ -22,5 +22,21 @@ RSpec.describe '/hobbyists (hobbyist index page)', type: :features do
       expect(page).to have_content("Name: Billy Bob #{hobbyist_2.created_at}")
       # Capybara.exact = true
     end
+
+    it 'links to car index' do
+      visit "/hobbyists/"
+  
+      click_link("Car Index")
+  
+      expect(current_path).to eq("/cars")
+    end
+      
+    it 'links to car index' do
+    visit "/hobbyists/"
+      save_and_open_page
+    click_link("Hobbyist Index")
+      
+    expect(current_path).to eq("/hobbyists")
+    end
   end
 end

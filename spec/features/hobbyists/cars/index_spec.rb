@@ -24,5 +24,21 @@ RSpec.describe '/hobbyists/:hobyist_id/cars (Hobbyist Cars index page)', type: :
       expect(page).to have_content(studebaker.year)
       expect(page).to have_content(studebaker.mileage)
     end
+
+    it 'links to car index' do
+      visit "/hobbyists/#{hobbyist_1.id}/cars"
+
+      click_link("Car Index")
+
+      expect(current_path).to eq("/cars")
+    end
+      
+    it 'links to car index' do
+      visit "/hobbyists/#{hobbyist_1.id}/cars"
+        
+      click_link("Hobbyist Index")
+        
+      expect(current_path).to eq("/hobbyists")
+    end
   end
 end

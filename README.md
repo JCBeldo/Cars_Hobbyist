@@ -59,21 +59,21 @@ When I visit a Hobbyist's show page
 I see a count of the number of Cars associated with this Hobbyist
 
 Usability
-- [] done
+- [x] done
 
 User Story 8, Car Index Link
 
 As a visitor
 When I visit any page on the site
 Then I see a link at the top of the page that takes me to the Car Index
-- [] done
+- [x] done
 
 User Story 9, Hobbyist Index Link
 
 As a visitor
 When I visit any page on the site
 Then I see a link at the top of the page that takes me to the Hobbyist Index
-- [] done
+- [x] done
 
 User Story 10, Hobbyist Car Index Link
 

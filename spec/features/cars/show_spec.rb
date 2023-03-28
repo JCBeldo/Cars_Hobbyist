@@ -11,7 +11,7 @@ RSpec.describe '/cars/show (Cars show page)', type: :features do
 
     it 'should display car associated with the id and its attributes' do
       visit "/cars/#{mini.id}"
-      # save_and_open_page
+      
       expect(page).to have_content("1965 Mini Cooper")
       expect(page).to have_content(mini.make)
       expect(page).to have_content(mini.model)
@@ -20,13 +20,29 @@ RSpec.describe '/cars/show (Cars show page)', type: :features do
       expect(page).to have_content(mini.mileage)
       
       visit "/cars/#{bizzarrini.id}"
-      # save_and_open_page
+      
       expect(page).to have_content("1965 Bizzarrini 5300 GT Strada")
       expect(page).to have_content(bizzarrini.make)
       expect(page).to have_content(bizzarrini.model)
       expect(page).to have_content(bizzarrini.drivable)
       expect(page).to have_content(bizzarrini.year)
       expect(page).to have_content(bizzarrini.mileage)
+    end
+
+    it 'links to car index' do
+      visit "/cars/"
+
+      click_link("Car Index")
+
+      expect(current_path).to eq("/cars")
+    end
+      
+    it 'links to car index' do
+      visit "/cars/"
+        
+      click_link("Hobbyist Index")
+        
+      expect(current_path).to eq("/hobbyists")
     end
   end
 end

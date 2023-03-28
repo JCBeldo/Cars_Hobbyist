@@ -1,4 +1,6 @@
-<h1><%=@hobbyist.name%>'s Cars</h1>
+<%= link_to "Car Index", '/cars' %>
+<%= link_to "Hobbyist Index", '/hobbyists' %>
+<h2><%= link_to "#{@hobbyist.name}'s Cars", "/hobbyists/#{@hobbyist.id}/cars" %></h2>
 <h2>Name:</h2><%= @hobbyist.name %>
 <h2>Has Insurance:</h2><%= @hobbyist.insurance %>
 <h2>Garage Capacity:</h2><%= @hobbyist.garage_capacity %>

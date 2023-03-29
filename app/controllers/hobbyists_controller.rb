@@ -15,9 +15,21 @@ class HobbyistsController < ApplicationController
     redirect_to '/hobbyists'
   end
 
+  def edit
+    @hobbyist = Hobbyist.find(params[:id])
+    # redirect_to "/hobbyists"
+  end
+
+  def update
+    hobbyist = Hobbyist.find(params[:id])
+    hobbyist.update(hobbyist_params)
+    redirect_to '/hobbyists'
+  end
+
   private
   def hobbyist_params
-    params.permit(:name)
+    params.permit(:name, :garage_capacity, :insurance)
+    # params.permit(:garage_capacity)
   end
 end
 

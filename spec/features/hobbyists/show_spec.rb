@@ -55,10 +55,32 @@ RSpec.describe '/hobbyists/:id (Hobbyist show page)', type: :features do
     
     it 'links to car index' do
     visit "/hobbyists/#{hobbyist_1.id}"
-      save_and_open_page
+      
     click_link("Hobbyist Index")
       
     expect(current_path).to eq("/hobbyists")
+    end
+
+    it 'links to the edit page from the hobbyists show page' do
+      visit "/hobbyists/#{hobbyist_1.id}"
+  
+      click_link('Update Hobbyist')
+  
+      expect(current_path).to eq("/hobbyists/#{hobbyist_1.id}/edit")
+    end
+  
+    it 'can update a hobbyist' do
+      visit "/hobbyists/#{hobbyist_1.id}/edit"
+
+      fill_in("Name", with: "Joe John")
+      fill_in('Insurance', with: true)
+      fill_in('garage_capacity', with: 10)
+      click_button("Update Hobbyist")
+  
+      expect(current_path).to eq("/hobbyists")
+      expect(page).to have_content("Joe John")
+      expect(page).to have_content(true)
+      expect(page).to have_content(10)
     end
   end
 end

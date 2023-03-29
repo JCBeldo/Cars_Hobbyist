@@ -11,7 +11,7 @@ RSpec.describe 'the Hobbyist creation' do
 
   it 'can create a new hobbyist' do
     visit '/hobbyists/new'
-save_and_open_page
+
     fill_in('Name', with: "Peter Paul")
     click_on("Create Hobbyist")
 

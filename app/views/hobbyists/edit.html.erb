@@ -1,0 +1,12 @@
+<%= link_to "Car Index", '/cars' %>
+<%= link_to "Hobbyist Index", '/hobbyists' %>
+<%= form_with url: "/hobbyists/#{@hobbyist.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :insurance %>
+  <%= form.text_field :insurance %>
+  <%= form.label :garage_capacity %>
+  <%= form.text_field :garage_capacity %>
+
+  <%= form.submit "Update Hobbyist" %>
+<% end %>

@@ -97,7 +97,7 @@ And I click the button "Create Hobbyist" to submit the form
 Then a `POST` request is sent to the '/Hobbyists' route,
 a new Hobbyist record is created,
 and I am redirected to the Hobbyist Index page where I see the new Hobbyist displayed.
-- [] done
+- [x] done
 
 User Story 12, Hobbyist Update 
 
